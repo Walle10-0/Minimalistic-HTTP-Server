@@ -1,0 +1,8 @@
+staticHTTPserver:	staticHTTPserver.o handleHTTPclient.o
+	gcc staticHTTPserver.o handleHTTPclient.o -o staticHTTPserver
+
+staticHTTPserver.o:	staticHTTPserver.c
+	gcc -c -lpthread staticHTTPserver.c
+
+handleHTTPclient.o:	handleHTTPclient.c
+	gcc -c handleHTTPclient.c
